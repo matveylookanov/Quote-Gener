@@ -1,0 +1,4 @@
+from PIL import Image
+
+img = Image.new('RGBA', (32, 32), (255, 255, 255, 0))  # Прозрачная 32x32 картинка
+img.save("app/static/favicon.ico")

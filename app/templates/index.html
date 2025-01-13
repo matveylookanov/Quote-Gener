@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Quote Generator</h1>
+    <div id="quotes">
+        {% for quote in quotes %}
+            <p>"{{ quote.text }}" - {{ quote.author or "Unknown" }} ({{ quote.category }})</p>
+        {% endfor %}
+    </div>
+    <footer>
+        <a href="/api/quote/random" target="_blank">Random Quote API</a>
+    </footer>
+</body>
+</html>
